@@ -1,0 +1,26 @@
+{
+  "name": "ngbp",
+  "version": "0.0.1",
+  "homepage": "http://github.com/ianwalter/ngbp",
+  "main": "index.html",
+  "authors": [
+    "Ian Kennington Walter (http://www.iankwalter.com)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "*",
+    "bootstrap": "~3.0.3",
+    "font-awesome": "~4.0.3",
+    "requirejs": "~2.1.10",
+    "jquery": "~2.0.3",
+    "angular-route": "~1.2.9"
+  }
+}
