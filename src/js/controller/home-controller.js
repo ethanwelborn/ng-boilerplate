@@ -10,8 +10,9 @@ define(
       .controller('HomeController', [
         '$scope',
         '$http',
-        function($scope, $http) {
+        function($scope) {
           $scope.name = 'Ian';
+          $scope.site = 'http://www.iankwalter.com';
         }
       ]);
   }
