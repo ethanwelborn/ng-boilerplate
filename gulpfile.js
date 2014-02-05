@@ -17,7 +17,7 @@ gulp.task('default', function(){
     gulp.run('less');
   });
 
-  gulp.watch('src/template/**/*.template', function(event) {
+  gulp.watch('src/template/**/*.html', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('minify-template');
   });
@@ -54,13 +54,13 @@ gulp.task('copy-js', function() {
 });
 
 gulp.task('minify-template', function() {
-  gulp.src('src/template/**/*.template')
+  gulp.src('src/template/**/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('assets/template'))
 });
 
 gulp.task('copy-template', function() {
-  gulp.src('src/template/**/*.template')
+  gulp.src('src/template/**/*.html')
     .pipe(gulp.dest('assets/template'))
 });
 
