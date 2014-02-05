@@ -1,0 +1,1 @@
+define(["angular"],function(e){"use strict";e.module("home-controller",["ng-boilerplate"]).controller("HomeController",["$scope","$http",function(e){e.name="Ian",e.site="http://www.iankwalter.com"}])});

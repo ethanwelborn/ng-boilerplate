@@ -9,16 +9,16 @@ require(
   function(angular) {
     'use strict';
 
-    var ngbp = angular.module('ngbp', ['ngRoute', 'ngbp.controllers'])
+    angular.module('ng-boilerplate', ['ngRoute', 'home-controller'])
       .config(['$routeProvider', function($routeProvider) {
         $routeProvider
           .when('/', {
             controller: 'HomeController',
-            templateUrl: 'template/home.html'
+            templateUrl: '/assets/template/home.html'
           })
           .otherwise({ redirectTo: '/' });
       }]);
 
-    angular.bootstrap(document , ['ngbp']);
+    angular.bootstrap(document , ['ng-boilerplate']);
   }
 );

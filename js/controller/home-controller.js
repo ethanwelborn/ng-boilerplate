@@ -1,1 +1,0 @@
-define(["angular"],function(n){"use strict";n.module("ngbp.controllers",["ngbp"]).controller("HomeController",["$scope","$http",function(n){n.name="Ian"}])});

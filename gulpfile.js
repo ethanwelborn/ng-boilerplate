@@ -5,7 +5,7 @@ var path = require('path'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('default', function(){
-  gulp.run('uglify-js', 'less', 'minify-html');
+  gulp.run('uglify-js', 'less', 'minify-template');
 
   gulp.watch('src/js/**/*.js', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -17,14 +17,14 @@ gulp.task('default', function(){
     gulp.run('less');
   });
 
-  gulp.watch('src/html/**/*.html', function(event) {
+  gulp.watch('src/template/**/*.template', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    gulp.run('minify-html');
+    gulp.run('minify-template');
   });
 });
 
 gulp.task('debug', function(){
-  gulp.run('copy-js', 'less', 'copy-html');
+  gulp.run('copy-js', 'less', 'copy-template');
 
   gulp.watch('src/js/**/*.js', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -38,36 +38,36 @@ gulp.task('debug', function(){
 
   gulp.watch('src/js/**/*.js', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    gulp.run('copy-html');
+    gulp.run('copy-template');
   });
 });
 
 gulp.task('uglify-js', function() {
   gulp.src('src/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('assets/js'))
 });
 
 gulp.task('copy-js', function() {
   gulp.src('src/js/**/*.js')
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('assets/js'))
 });
 
-gulp.task('minify-html', function() {
-  gulp.src('src/html/**/*.html')
+gulp.task('minify-template', function() {
+  gulp.src('src/template/**/*.template')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('template'))
+    .pipe(gulp.dest('assets/template'))
 });
 
-gulp.task('copy-html', function() {
-  gulp.src('src/html/**/*.html')
-    .pipe(gulp.dest('template'))
+gulp.task('copy-template', function() {
+  gulp.src('src/template/**/*.template')
+    .pipe(gulp.dest('assets/template'))
 });
 
 gulp.task('less', function () {
   gulp.src('src/less/**/*.less')
     .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
+      paths: [ path.join(__dirname, 'assets/less', 'includes') ]
     }))
     .pipe(gulp.dest('css'));
 });

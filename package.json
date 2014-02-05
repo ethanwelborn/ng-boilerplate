@@ -1,21 +1,21 @@
 {
-  "name": "ngbp",
+  "name": "ng-boilerplate",
   "version": "0.0.1",
-  "description": "[3b+](http://ianwalter.github.io/3bp/) === #### Backbone-Bootstrap-Boilerplate Plus - A base for client-side development",
+  "description": "A base for front-end development with AngularJS.",
   "main": "index.html",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ianwalter/ngbp.git"
+    "url": "git://github.com/ianwalter/ng-boilerplate.git"
   },
   "author": "Ian Kennington Walter (http://www.iankwalter.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ianwalter/ngbp/issues"
+    "url": "https://github.com/ianwalter/ng-boilerplate/issues"
   },
-  "homepage": "https://github.com/ianwalter/ngbp",
+  "homepage": "https://github.com/ianwalter/ng-boilerplate",
   "devDependencies": {
     "gulp": "~3.4.0",
     "gulp-util": "~2.2.12",

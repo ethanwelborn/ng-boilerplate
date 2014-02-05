@@ -6,7 +6,7 @@ define(
     'use strict';
 
     angular
-      .module('ngbp.controllers', ['ngbp'])
+      .module('home-controller', ['ng-boilerplate'])
       .controller('HomeController', [
         '$scope',
         '$http',
