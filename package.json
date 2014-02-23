@@ -1,7 +1,7 @@
 {
   "name": "ng-boilerplate",
   "version": "0.0.1",
-  "description": "A base for front-end development with AngularJS.",
+  "description": "A base for front-end development with AngularJS",
   "main": "index.html",
   "scripts": {
     "test": "gulp test"
