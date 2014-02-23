@@ -16,7 +16,6 @@
     "angular": "v1.2.11",
     "angular-route": "v1.2.11",
     "bootstrap": "~3.1.0",
-    "jquery": "~2.1.0",
     "Font-Awesome": "~4.0.3"
   }
 }
