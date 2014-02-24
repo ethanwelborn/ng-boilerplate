@@ -8,10 +8,6 @@ var requirejsConfig = {
     'angular-route': [
       '//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular-route.min',
       'lib/angular-route/angular-route.min'
-    ],
-    'bootstrap': [
-      '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min',
-      'lib/bootstrap/dist/js/bootstrap.min'
     ]
   },
   shim: {
@@ -20,9 +16,6 @@ var requirejsConfig = {
     },
     'angular-route': {
       deps: ['angular']
-    },
-    'bootstrap': {
-      deps: ['jquery']
     }
   }
 };
