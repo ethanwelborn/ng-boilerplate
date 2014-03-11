@@ -1,6 +1,6 @@
 {
   "name": "ng-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A base for front-end development with AngularJS",
   "main": "index.html",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git://github.com/ianwalter/ng-boilerplate.git"
   },
-  "author": "Ian Kennington Walter (http://www.iankwalter.com)",
+  "author": "Ian Kennington Walter (http://ianvonwalter.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ianwalter/ng-boilerplate/issues"

@@ -1,10 +1,10 @@
 {
   "name": "ng-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/ianwalter/ng-boilerplate",
   "main": "index.html",
   "authors": [
-    "Ian Kennington Walter (http://www.iankwalter.com)"
+    "Ian Kennington Walter (http://ianvonwalter.com)"
   ],
   "license": "MIT",
   "ignore": [
@@ -14,8 +14,6 @@
   "dependencies": {
     "requirejs": "~2.1.10",
     "angular": "v1.2.11",
-    "angular-route": "v1.2.11",
-    "bootstrap": "~3.1.0",
-    "Font-Awesome": "~4.0.3"
+    "angular-route": "v1.2.11"
   }
 }
