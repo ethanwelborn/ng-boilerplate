@@ -1,0 +1,1 @@
+define(["angular"],function(e){"use strict";e.module("name-service",[]).factory("NameService",function(){return{name:""}})});

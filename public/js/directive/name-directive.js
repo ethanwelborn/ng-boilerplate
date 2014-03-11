@@ -1,0 +1,1 @@
+define(["angular"],function(e){"use strict";e.module("name-directive",[]).directive("name",function(){return{restrict:"E",scope:{value:"="},template:'<span class="name">{{ formattedValue }}</span>',link:function(e){e.$watch("value",function(t){e.formattedValue=t.length?"Well "+t+",":""})}}})});

@@ -1,18 +1,19 @@
 define(
   [
-    'angular'
+    'angular',
+    'js/service/name-service',
+    'js/directive/name-directive'
   ],
   function(angular) {
     'use strict';
 
     angular
-      .module('home-controller', ['ng-boilerplate'])
+      .module('home-controller', ['ng-boilerplate', 'name-service', 'name-directive'])
       .controller('HomeController', [
         '$scope',
-        '$http',
-        function($scope) {
-          $scope.name = 'Ian';
-          $scope.site = 'http://www.iankwalter.com';
+        'NameService',
+        function($scope, NameService) {
+          $scope.nameService = NameService;
         }
       ]);
   }

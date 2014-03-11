@@ -1,5 +1,5 @@
 var requirejsConfig = {
-  baseUrl: 'assets/',
+  baseUrl: 'public/',
   paths: {
     'angular': [
       '//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min',

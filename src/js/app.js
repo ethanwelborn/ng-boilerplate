@@ -14,7 +14,7 @@ require(
         $routeProvider
           .when('/', {
             controller: 'HomeController',
-            templateUrl: 'assets/template/home.html'
+            templateUrl: 'public/template/home.html'
           })
           .otherwise({ redirectTo: '/' });
       }]);
