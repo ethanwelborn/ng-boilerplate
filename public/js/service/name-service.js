@@ -1,1 +1,1 @@
-define(["angular"],function(e){"use strict";e.module("name-service",[]).factory("NameService",function(){return{name:""}})});
+define(["angular"],function(e){"use strict";e.module("name-service",[]).factory("NameService",function(){return{formatName:function(n){return n=n.split(" "),e.forEach(n,function(e,r){n[r]=e.charAt(0).toUpperCase()+e.substring(1).toLowerCase()}),n.join(" ")}}})});

@@ -1,6 +1,4 @@
-requirejs.config(requirejsConfig);
-
-require(
+define(
   [
     'angular',
     'angular-route',
@@ -15,10 +13,11 @@ require(
           .when('/', {
             controller: 'HomeController',
             templateUrl: 'public/template/home.html'
+
           })
           .otherwise({ redirectTo: '/' });
-      }]);
 
-    angular.bootstrap(document , ['ng-boilerplate']);
+
+      }]);
   }
 );

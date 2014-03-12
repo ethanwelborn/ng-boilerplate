@@ -3,6 +3,7 @@ var path = require('path'),
     uglify = require('gulp-uglify'),
     less = require('gulp-less'),
     htmlmin = require('gulp-htmlmin'),
+    karma = require('gulp-karma'),
     jshint = require('gulp-jshint');
 
 gulp.task('default', function(){
@@ -22,6 +23,12 @@ gulp.task('default', function(){
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('minify-template');
   });
+
+  gulp.src(['undefined.js'])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'watch'
+    }));
 });
 
 gulp.task('debug', function(){
@@ -41,6 +48,12 @@ gulp.task('debug', function(){
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('copy-template');
   });
+
+  gulp.src(['undefined.js'])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'watch'
+    }));
 });
 
 gulp.task('uglify-js', function() {
@@ -77,4 +90,15 @@ gulp.task('lint', function () {
   gulp.src('src/js/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
+});
+
+gulp.task('test', function() {
+  gulp.run('uglify-js');
+
+  // undefined.js: unfortunately necessary for now
+  return gulp.src(['undefined.js'])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'run'
+    }))
 });
