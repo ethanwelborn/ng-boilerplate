@@ -15,7 +15,6 @@
 	* [Karma](http://karma-runner.github.io/) - JavaScript unit test runner
 	* [Mocha](http://visionmedia.github.io/mocha/) - Testing framework
 	* [Chai](http://chaijs.com/) - Super-flexible assertion library
-	* [Protractor](https://github.com/angular/protractor/) - End-to-end test runner (WebDriver)
 
 
 #### Instructions:
