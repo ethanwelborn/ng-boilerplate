@@ -6,7 +6,7 @@ var path = require('path'),
     karma = require('gulp-karma'),
     jshint = require('gulp-jshint');
 
-gulp.task('default', function(){
+gulp.task('default', function() {
   gulp.run('uglify-js', 'less', 'minify-template', 'lint');
 
   gulp.watch('src/js/**/*.js', function(event) {
@@ -31,7 +31,7 @@ gulp.task('default', function(){
     }));
 });
 
-gulp.task('debug', function(){
+gulp.task('debug', function() {
   gulp.run('copy-js', 'less', 'copy-template', 'lint');
 
   gulp.watch('src/js/**/*.js', function(event) {
@@ -59,23 +59,23 @@ gulp.task('debug', function(){
 gulp.task('uglify-js', function() {
   gulp.src('src/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('copy-js', function() {
   gulp.src('src/js/**/*.js')
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('minify-template', function() {
   gulp.src('src/template/**/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('public/template'))
+    .pipe(gulp.dest('public/template'));
 });
 
 gulp.task('copy-template', function() {
   gulp.src('src/template/**/*.html')
-    .pipe(gulp.dest('public/template'))
+    .pipe(gulp.dest('public/template'));
 });
 
 gulp.task('less', function () {
@@ -100,5 +100,5 @@ gulp.task('test', function() {
     .pipe(karma({
       configFile: 'karma.conf.js',
       action: 'run'
-    }))
+    }));
 });
