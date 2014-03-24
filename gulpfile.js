@@ -44,7 +44,7 @@ gulp.task('debug', function() {
     gulp.run('less');
   });
 
-  gulp.watch('src/js/**/*.js', function(event) {
+  gulp.watch('src/template/**/*.html', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('copy-template');
   });
