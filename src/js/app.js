@@ -16,8 +16,6 @@ define(
 
           })
           .otherwise({ redirectTo: '/' });
-
-
       }]);
   }
 );
