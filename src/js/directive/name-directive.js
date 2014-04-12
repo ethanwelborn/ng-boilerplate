@@ -4,10 +4,9 @@ define(
     'use strict';
 
     angular
-      .module('name-directive', ['name-service'])
-      .directive('name', ['NameService', function(NameService) {
+      .module('ng-boilerplate.name-directive', ['ng-boilerplate.name-service'])
+      .directive('nameFormat', ['NameService', function(NameService) {
         return {
-          restrict: 'E',
           scope: {
             value: '='
           },

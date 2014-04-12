@@ -7,7 +7,7 @@ define(
   function(angular) {
     'use strict';
 
-    angular.module('ng-boilerplate', ['ngRoute', 'home-controller'])
+    angular.module('ng-boilerplate', ['ngRoute', 'ng-boilerplate.home-controller'])
       .config(['$routeProvider', function($routeProvider) {
         $routeProvider
           .when('/', {

@@ -8,7 +8,10 @@ define(
     'use strict';
 
     angular
-      .module('home-controller', ['ng-boilerplate', 'name-service', 'name-directive'])
+      .module('ng-boilerplate.home-controller', [
+        'ng-boilerplate.name-service',
+        'ng-boilerplate.name-directive'
+      ])
       .controller('HomeController', [
         '$scope',
         'NameService',
